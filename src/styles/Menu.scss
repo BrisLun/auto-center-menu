@@ -1,0 +1,84 @@
+.home-tab {
+  width: 100%;
+  background-color: white;
+  margin: 0;
+
+  &__menu-bar {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    border: 1px solid gainsboro;
+  }
+  &__menu {
+    -webkit-overflow-scrolling: auto;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 4rem);
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    > li {
+      display: inline;
+      text-align: center;
+      > div {
+        padding: 10px 20px;
+      }
+    }
+    > .active {
+      font-weight: 700;
+    }
+  }
+  &__menu-content {
+  }
+  &__accordion-button {
+    height: 100%;
+    width: 4rem;
+    border: none;
+    background-color: white;
+    border-left: 1px solid gainsboro;
+    align-items: center;
+    margin: auto;
+    > img {
+      width: 20px;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-left: 1px solid gainsboro;
+    font-size: 13px;
+  }
+  &__grid-block {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    > .active {
+      font-weight: 700;
+    }
+  }
+  &__grid-inner {
+    margin: auto;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gainsboro;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
