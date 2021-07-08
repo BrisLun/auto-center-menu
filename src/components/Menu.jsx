@@ -6,8 +6,6 @@ import upIcon from '../imgs/arrow-down.svg';
 import downIcon from '../imgs/arrow-up.svg';
 import '../styles/Menu.scss';
 
-import Collapse from 'react-bootstrap/Collapse'
-
 function Menu(props) {
   const { menuList } = props;
   const [currentMenu, setCurrentMenu] = useState(0);
@@ -171,9 +169,6 @@ function Menu(props) {
     );
   }
 
-  const [open, setOpen] = useState(false);
-
-
   return (
     <div className="home-tab">
       <div className="home-tab__accordion">
@@ -187,20 +182,6 @@ function Menu(props) {
             <CustomToggle eventKey="0"></CustomToggle>
             <AccordionMenuClose></AccordionMenuClose>
           </div>
-          <button
-        onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
-        aria-expanded={open}
-      >
-        click
-      </button>
-      <Collapse in={open}>
-        <div id="example-collapse-text">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-          terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-          labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-      </Collapse>
 
           <Accordion.Collapse eventKey="0">
             <div className="home-tab__grid">
